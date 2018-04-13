@@ -1,33 +1,23 @@
-package QuanLiKhachHang;
+package QuanLiTienDien;
 
 import java.util.Scanner;
 
 
-public class Khachhang {
-    private String maKH;
-    private String hoTen;
-    private int namSinh;
-    public int tongLuong;
-    Khachhang(){
+class Khachhang {
+    String hoTen;
+    int soNha;
+    int soCongTo;
+    
+    public Khachhang(){
+    	
         
     }
-     Khachhang(String maKH){
-         this.maKH = maKH;
-	}  
-     Khachhang(String maKH,String hoTen,int namSinh,int tongLuong){
-         this.maKH = maKH;
-         this.hoTen = hoTen;
-         this.namSinh= namSinh;
-         this.tongLuong = tongLuong;
-     } 
-
-    public String getMaKH() {
-        return maKH;
-    }
-
-    public void setMaKH(String maKH) {
-        this.maKH = maKH;
-    }
+    public Khachhang(String hoTen, int soNha, int soCongTo) {
+        this.hoTen = hoTen;
+        this.soNha = soNha;
+        this.soCongTo = soCongTo;
+    
+}
 
     public String getHoTen() {
         return hoTen;
@@ -37,45 +27,38 @@ public class Khachhang {
         this.hoTen = hoTen;
     }
 
-    public int getNamSinh() {
-        return namSinh;
+    public int getSoNha() {
+        return soNha;
     }
 
-    public void setNamSinh(int namSinh) {
-        this.namSinh = namSinh;
+    public void setSoNha(int soNha) {
+        this.soNha = soNha;
     }
 
-    public int getTongLuong() {
-        return tongLuong;
+    public int getSoCongTo() {
+        return soCongTo;
     }
 
-    public void setTongLuong(int tongLuong) {
-        this.tongLuong = tongLuong;
+    public void setSoCongTo(int soCongTo) {
+        this.soCongTo = soCongTo;
     }
-     public void NhapTT(){
-         Scanner sc = new Scanner(System.in);
-         System.out.println("Ma khach hang : ");
-         maKH = sc.nextLine();
-         System.out.println("Ten khach hang : ");
-         hoTen  = sc.nextLine();
-         System.out.println("Nam sinh : ");
-         namSinh  = Integer.parseInt(sc.nextLine());
-         System.out.println("Tong luong : ");
-         tongLuong  =Integer.parseInt(sc.nextLine());
-         
-         
-         
-     }
-     public void HienThiTT(){
-         System.out.println("Ma khach hang : "+maKH);
-         System.out.println("Ten khach hang : "+hoTen);
-         System.out.println("Nam sinh : "+namSinh);
-         System.out.println("Tong luong : "+tongLuong);
-     }
-
-    int getTongluong() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void NhapThongTin(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ho ten ho dan su dung");
+        hoTen = sc.nextLine();
+        System.out.println("So nha");
+        soNha = Integer.parseInt(sc.nextLine());
+        System.out.println("So cong to");
+        soCongTo = Integer.parseInt(sc.nextLine());
+        
     }
+    public void HienThiThongTin(){
+        System.out.println("Ho ten ho dan :"+hoTen);
+        System.out.println("So nha :"+soNha);
+        System.out.println("So cong to :"+soCongTo);
+        
+        
+    }
+    
 }
-
 
